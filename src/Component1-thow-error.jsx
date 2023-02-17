@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 
+function ErrorFallback() {
+  return (
+    <div>
+      <h2>Something went wrong.</h2>
+      <p>Please refresh the page or try again later.</p>
+    </div>
+  );
+}
+
 function Component1() {
   const [hasError, setHasError] = useState(false);
 
@@ -17,14 +26,7 @@ function Component1() {
 
 export default Component1;
 
-function ErrorFallback() {
-  return (
-    <div>
-      <h2>Something went wrong.</h2>
-      <p>Please refresh the page or try again later.</p>
-    </div>
-  );
-}
+
 
 function MyComponent(props) {
   function handleClick() {
