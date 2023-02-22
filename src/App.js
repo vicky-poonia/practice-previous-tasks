@@ -1,5 +1,6 @@
 import "./App.css";
-import Component1 from "./Component1-thow-error";
+import Component1 from "./Components/Component1-thow-error";
+// import Navigation from "./Components/Navigation-without-routing";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <p>Learn React</p> 
+          <Component1 />
           <Component1 />
         </header>
       </div>
