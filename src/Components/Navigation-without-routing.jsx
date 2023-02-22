@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Home from './Home';
 import About from './About';
 
-export function Navigation() {
+export default function Navigation() {
   const [page, setPage] = useState("home");
 
   function handlePageChange(newPage) {
