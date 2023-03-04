@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
-import Home from './Home';
-import About from './About';
+import React, { useState } from "react";
+import Home from "./Home";
+import About from "./About";
+// import Contact from "./Contact";
 
 export default function Navigation() {
   const [page, setPage] = useState("home");
 
   function handlePageChange(newPage) {
-    setPage(newPage);
+    setPage(<div>{newPage}</div>);
   }
 
   return (
@@ -24,7 +25,7 @@ export default function Navigation() {
             </a>
           </li>
           {/* <li>
-            <a href="#" onClick={() => handlePageChange("contact")}>
+            <a href="/" onClick={() => handlePageChange("contact")}>
               Contact
             </a>
           </li> */}
