@@ -1,39 +1,23 @@
 import React, { useState } from "react";
 import Home from "./Home";
 import About from "./About";
-// import Contact from "./Contact";
+import Contact from "./Contact";
 
 export default function Navigation() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState("");
 
-  function handlePageChange(newPage) {
-    setPage(<div>{newPage}</div>);
-  }
+  const navigateToHome = () => setPage("home");
+  const navigateToAbout = () => setPage("about");
+  const navigateToContact = () => setPage("Contact");
 
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <a href="/" onClick={() => handlePageChange("Home")}>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/" onClick={() => handlePageChange("About")}>
-              About
-            </a>
-          </li>
-          {/* <li>
-            <a href="/" onClick={() => handlePageChange("contact")}>
-              Contact
-            </a>
-          </li> */}
-        </ul>
-      </nav>
-      {page === "Home" && <Home />}
-      {page === "About" && <About />}
-      {/* {page === "contact" && <Contact />} */}
+      <button onClick={navigateToHome}>Home</button> <span></span>
+      <button onClick={navigateToAbout}>About</button> <span></span>
+      <button onClick={navigateToContact}>Contact</button> <span></span>
+      {page === "home" && <Home />}
+      {page === "about" && <About />}
+      {page === "Contact" && <Contact />}
     </div>
   );
 }
